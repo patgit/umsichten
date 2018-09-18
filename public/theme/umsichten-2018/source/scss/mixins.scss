@@ -1,0 +1,3 @@
+@mixin ani($name, $duration, $delay) {
+    animation: $name #{$duration}s ease #{$delay}s forwards;
+}

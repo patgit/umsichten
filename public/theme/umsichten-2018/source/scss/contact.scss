@@ -1,0 +1,58 @@
+.section.contact {
+
+  .content {
+    text-align: center;
+  
+
+	h1, h2 {
+    width: 70%;
+    font-size: 22px;    
+  	color: #d8dae0;
+
+    @include media-breakpoint-up(sm) { 
+      width: 50%;
+      font-size: 24px;    
+    }
+
+    @include media-breakpoint-up(md) { 
+      width: 40%;
+      font-size: 26px;    
+    }
+
+    @include media-breakpoint-up(lg) { 
+      width: 60%;
+      font-size: 30px;    
+    }
+	}
+
+  h3 {
+    font-size: 18px;
+    margin: 40px 0 5px 0;
+
+    @include media-breakpoint-up(sm) { 
+      font-size: 20px;    
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    font-size: 14px;
+
+    color: $primary;
+
+    &:hover, &:focus, &:active {
+      border-color: $primary;
+    }
+
+    @include media-breakpoint-up(sm) { 
+      font-size: 16px;    
+    }
+  }
+
+  }
+
+}
+

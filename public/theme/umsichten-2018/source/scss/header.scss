@@ -1,0 +1,80 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  // height: 50px;
+  background-color: $blue;
+  // border-bottom: 1px solid $primary;
+  // transition: background-color 1s cubic-bezier(1.0,0.1,0.05,1.0);
+  z-index: 100;
+
+
+
+      overflow: visible;
+
+  .container {
+    float: clear;
+
+  }
+}
+
+
+.isHomepage #logo {
+  transform: translateX(60%) translateY(25vh) scale(2);
+
+  @include media-breakpoint-up(md) { 
+    transform: translateX(110%) translateY(25vh) scale(2);
+  }
+
+  @include media-breakpoint-up(xl) { 
+    transform: translateX(170%) translateY(25vh) scale(2);
+  }
+}
+
+
+.scrolled .isHomepage #logo {
+  transform: translateX(0) translateY(0) scale(1);
+}
+
+#logo {
+  border: 0;
+  display: block;
+  margin: 20px 0;
+  transform: translateX(0) translateY(0) translateZ(0) scale(1);
+  transition: transform 300ms cubic-bezier(0,0,.58,1);
+
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+
+  transform: rotateY(29deg);
+
+  &:hover  {
+  }
+
+  #gUm {
+    animation: gUmIn .4s forwards;
+  }
+
+  #gSichten {
+    animation: gSichtenIn .4s forwards, twist 2s .8s forwards;
+    transform-origin: -101px 205px;
+  }
+
+  svg { 
+      width: 100%;
+      height: auto;
+      fill: $primary;
+      overflow: visible;
+    }
+
+  img {
+    width: 100%;
+    height: auto;
+    // transition: all 1.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+
+
+
+}
+

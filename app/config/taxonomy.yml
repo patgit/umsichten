@@ -1,0 +1,27 @@
+# This file defines the different types of taxonomies in Bolt. See the
+# documentation for details: https://docs.bolt.cm/contenttypes/taxonomies
+
+tags:
+    slug: tags
+    singular_slug: tag
+    behaves_like: tags
+    postfix: "Add some freeform tags. Start a new tag by typing a comma or space."
+    allow_spaces: false
+    #listing_template: tag-listing.twig #custom template
+
+groups:
+    slug: groups
+    singular_slug: group
+    behaves_like: grouping
+    options: { main: "Startseite" }
+    has_sortorder: true
+
+categories:
+    name: Categories
+    slug: categories
+    singular_name: Category
+    singular_slug: category
+    behaves_like: categories
+    multiple: false
+    options: [ news, events, movies, music, books, life, love, fun ]
+    has_sortorder: true

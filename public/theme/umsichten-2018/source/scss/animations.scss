@@ -1,0 +1,80 @@
+
+@keyframes gUmIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(-20px, 0, 0);
+  }
+  30% {
+    opacity: .1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes gSichtenIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(20px, 0, 0);
+  }
+  30% {
+    opacity: .1;
+  }  
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes twist {
+  0% {
+    transform: rotate3d(0,0,0,0);
+    opacity: 1;
+  }
+  15% {
+    transform: rotate3d(1,0,0, 90deg) rotate3d(0,1,0, 0);
+  }
+  15.1% {
+    transform: rotate3d(1,0,0, 90deg) rotate3d(0,1,0, 180deg);
+  }
+  30%, 70% {
+    transform: rotate3d(1,0,0, 180deg) rotate3d(0,1,0, 180deg);
+  }
+  85% {
+    transform: rotate3d(1,0,0, 90deg) rotate3d(0,1,0, 180deg);
+  }
+  85.1% {
+    transform: rotate3d(1,0,0, 90deg) rotate3d(0,1,0, 0);
+  }
+  100% {
+    transform: rotate3d(0,0,0,0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }  
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bubbleIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0) rotate(-90deg);
+  }  
+  50% {
+    transform: translate3d(0, 0, 0) scale(1.2) rotate(-90deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1) rotate(-90deg);
+    opacity: 1;
+  }
+}

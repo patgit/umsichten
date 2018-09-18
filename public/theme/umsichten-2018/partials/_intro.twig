@@ -1,0 +1,17 @@
+<section id="{{ record.slug }}" class="section intro">
+    <div class="container">
+    	<div class="row">
+            <div class="col-12">
+                <div class="content">
+                    <h1 class="fadeInDown">{{ record.body }}</h1>
+                </div>
+            </div>
+        </div>
+        
+        {% if target is defined %}
+        <a href="#{{ target.slug }}" class="svg-arrow btn-down">
+            {% include ('images/arrow.svg') %}
+        </a>
+        {% endif %}
+   	</div>
+</section>

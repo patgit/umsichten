@@ -1,0 +1,33 @@
+{% extends 'partials/_master.twig' %}
+
+{% setcontent sections = 'entries' %}
+
+{% block main %}
+
+  <main id="content" class="container-fluid">
+
+    {# add intro section #}
+    {{ include( 'partials/_intro.twig', {record: record, target: sections[1] }, with_context = true) }}
+
+    {# add other sections (entries) #}
+    {% for section in sections %}
+
+        {# set next section arrow link #}
+        {% if sections[loop.index] is defined %}
+            {% set nextSection = sections[loop.index] %}
+        {% else %}
+            {% set nextSection = false %}
+        {% endif %}
+
+        {# choose template based on template field #}
+        {% if section.template is not empty %}
+            {{ include( section.template, {record: section}, with_context = false) }}
+        {% else %}
+            {{ include( 'partials/_section.twig', {record: section, row: cycle(['even', 'odd'], loop.index0), target: nextSection }, with_context = false) }}
+        {% endif %}
+
+    {% endfor %}
+
+  </main>
+
+{% endblock main %}

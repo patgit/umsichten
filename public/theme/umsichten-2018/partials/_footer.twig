@@ -1,0 +1,37 @@
+<!-- Footer -->
+
+              {% setcontent ff = 'pages' where { groups: 'Footer' }  %}
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+              {% setcontent footerPages = 'pages' where { groups: 'Footer' }  %}
+
+                {# pages except 404 page #}
+                {% for item in footerPages if item.values.title != "404" %}
+                  
+                    {% if app.request.attributes.get('slug') == item.slug %}
+                      <a href="{{ item.slug }}" class="is-active">{{ item.title }}</a>
+                    {% else %}
+                      <a href="{{ item.slug }}">{{ item.title }}</a>
+                    {% endif %}
+
+                {% endfor %}
+                <span>&copy; umsichten 2018</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="{{ asset('dist/js/app.js', 'theme') }}"></script>
+{# <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113200248-1"></script> #}
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  // gtag('js', new Date());
+
+  //gtag('config', 'UA-113200248-1');
+</script>

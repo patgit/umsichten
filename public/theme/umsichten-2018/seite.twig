@@ -1,0 +1,13 @@
+{% extends 'partials/_master.twig' %}
+
+{% set sections = page %}
+
+{% block main %}
+
+  <main id="content" class="container-fluid">
+
+    {{ include( 'partials/_section.twig', {record: record, row: cycle(['even', 'odd'], loop.index0),single: true}, with_context = false) }}
+
+  </main>
+  
+{% endblock main %}

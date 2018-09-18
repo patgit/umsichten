@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="17">
+  <use fill="#FFF" transform="translate(1 1)" xlink:href="#path0_stroke"/>
+  <defs>
+    <path id="path0_stroke" d="M15 15l-.354.354.354.353.354-.353L15 15zM-.354.354l15 15 .708-.708-15-15-.708.708zm15.708 15l15-15-.708-.708-15 15 .708.708z"/>
+  </defs>
+</svg>

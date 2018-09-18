@@ -1,0 +1,52 @@
+{% setcontent homepage = 'homepage/1' %}
+
+{% setcontent sections = 'entries' %}
+
+<nav id="menu" role="navigation">
+	<ul id="navi" class="flyout">
+		{% for section in sections if section.title != "INTRO" %}
+	    <li>
+	    	<a class="menu-item" onclick="toggleBurger()" href="/#{{ section.slug }}">{{ section.title }}</a>
+		</li>
+	    {% endfor %}
+	</ul>
+</nav>
+
+<header id="header" class="header container-fluid {% if app.request.get('_route') == "homepage" %} isHomepage {% endif %}">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 col-md-4 col-sm-6 col-lg-4 col-xl-3">
+					<a id="logo" href="/">
+				   		{% include ( 'images/umsichten.svg' )  %}
+					</a>
+				</div>
+				<div class="col-6 col-md-8 col-sm-6 col-lg-8 col-xl-9">
+
+					{% if sections.length > 1 %}
+						<div id="menuToggle" class="burger" onclick="toggleBurger()">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</div>
+					{% endif %}
+
+
+				</div>
+			</div>
+		</div>
+</header>
+
+
+<script type="text/javascript">
+	var header = document.getElementById("header"),
+			body = document.body,
+			menuIsOpen = 'menu-is-open';
+
+	function toggleBurger() {
+		document.getElementById('menuToggle').classList.toggle("change");
+		console.log(body)
+		body.classList.toggle(menuIsOpen);
+	}
+
+
+</script>

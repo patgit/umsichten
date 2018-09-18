@@ -1,0 +1,66 @@
+{% extends 'partials/_master.twig' %}
+
+{% block main %}
+
+{#
+    <header class="container">
+        <div class="row justify-content-center h-100">
+            <div class="col-10 col-md-6">
+                <div id="logo" class="svg-logo animated-intro">
+                    {% include ('images/umsichten.svg') %}
+                </div>
+
+            </div>
+        </div>
+    </header>
+#}
+
+        
+    </main>
+
+    <main class="container">
+        <div class="row content bg-white">
+            <div class="col-12">
+                <div id="logo" class="svg-logo animated-intro">
+                    {% include ('images/umsichten.svg') %}
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-11">
+                <div class="content animate-fadeInDown">
+                    {{ record.body }}
+                </div>
+            </div>
+        </div>
+        <div class="contact animate-fadeInDown">
+            <div class="svg-arrow">
+                {% include ('images/arrow.svg') %}
+            </div>
+            <h2>NEHMEN SIE KONTAKT<br>MIT UNS AUF</h2>
+            <a href="mailto:kontakt@umsichten.com">kontakt@umsichten.com</a>
+        </div>
+    </main>
+
+    <aside class="global-info animate-bubbleIn">
+        <span>work in progress</span>
+    </aside>
+
+    {# <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#"></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer> #}
+
+{% endblock main %}

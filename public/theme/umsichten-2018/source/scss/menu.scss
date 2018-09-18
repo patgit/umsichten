@@ -1,0 +1,84 @@
+#menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 100;
+	transform: translateY(-100%);
+  	// transition: all .5s ease-out;
+
+	ul {
+		margin: 20vh 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			text-align: center;
+		}
+	}
+
+	a {
+		display: block;
+		margin: 0 auto;
+		width: 80%;
+		font-size: 25px;
+		padding: 20px 0;
+		border: 0;
+  		transition: color .5s ease-out;
+
+		&:hover, &:active {
+			color: $primary;
+		}
+
+	}
+}
+
+
+
+.burger {
+	position: relative;
+	display: inline-block;
+	float: right;
+	cursor: pointer;
+	z-index: 100;
+	top: 50%;
+	transform: translateY(-50%);
+
+	.bar1, .bar2, .bar3 {
+	    width: 30px;
+	    height: 3px;
+	    background-color: #333;
+	    margin-bottom: 6px;
+	    transition: 0.4s;
+	    background-color: $primary;
+	}
+
+	.bar3 {
+	    margin: 0;
+	}
+
+	/* Rotate first bar */
+	&.change .bar1 {
+	    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+	    transform: rotate(-45deg) translate(-9px, 6px) ;
+	}
+
+	/* Fade out the second bar */
+	&.change .bar2 {
+	    opacity: 0;
+	}
+
+	/* Rotate last bar */
+	&.change .bar3 {
+	    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+	    transform: rotate(45deg) translate(-7px, -4px) ;
+	}
+}
+
+.menu-is-open #menu {
+	// background-color: #fff;
+	transform: translateY(0%);
+  	// transition: all .5s ease-out;
+}

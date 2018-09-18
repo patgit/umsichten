@@ -1,0 +1,105 @@
+.section {
+
+  position: relative;
+
+  &.even {
+    @extend %section-white;
+  }
+
+  &.odd {
+    @extend %section-mint;
+  }
+
+  &.intro, &.contact {
+    @extend %section-blue;
+  }
+
+  &.bg-white {
+    background-color: #fff;
+    color: $blue;
+  }
+
+  
+  .container {
+    min-height: 100vh;
+  }
+
+  .content {
+    padding: 15vh 0 20vh 0;
+
+    h1, h2 {
+      margin: 5vh 0;
+    }
+
+  }
+
+    // &.animate-afadeInDown {
+        // @include ani('fadeInDown', 1, 4.5);
+        // opacity: 0;
+    // }
+
+    // @include media-breakpoint-up(md) { 
+        // padding: 40px;
+    // }
+
+}
+
+
+.svg-arrow {
+  svg {
+    stroke: $secondary;
+  }
+}
+
+.btn-down {
+  position: absolute;
+  left: 50%;
+  // transform: translateX(-50%);
+  // padding: 20px;
+  // margin-right: -50%;
+}
+
+
+//  section types
+//  -----------------
+// .contact {
+
+
+//   .content {
+//     text-align: center;
+
+//     a {
+//       color: $primary;
+
+//       &:hover, &:focus, &:active {
+//         border-color: $primary;
+//       }
+//     }
+//   }
+
+// }
+
+
+
+//  section themes
+//  -----------------
+%section-mint {
+  background-color: $primary;
+  color: $blue;
+}
+
+%section-blue {
+  background-color: $secondary;
+  color: $white;
+}
+
+%section-white {
+  background-color: $white;
+  color: $blue;
+}
+
+
+
+
+
+

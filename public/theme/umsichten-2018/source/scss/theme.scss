@@ -1,0 +1,114 @@
+@charset 'utf-8';
+
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss';
+
+@import 'mixins';
+@import 'vars';
+@import 'fonts';
+@import 'animations';
+
+@import 'header';
+@import 'menu';
+@import 'section';
+@import 'footer';
+
+@import 'intro';
+@import 'contact';
+
+
+// ############################################
+// common styles
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: 'Roboto-Light', sans-serif;
+  font-size: 16px;
+  background-color: $secondary;
+}
+
+.container-fluid {
+  padding: 0;
+  width: 100%;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto-Light', sans-serif;
+  color: $blue;
+
+}
+
+h1, h2 {
+    display: inline-block;
+    font-size: 26px;
+    text-align: center;
+    font-weight: lighter;
+    margin: 25px 0 20px 0;
+
+    @include media-breakpoint-up(md) { 
+        font-size: 32px;
+    }
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+a {
+    color: $secondary;
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 0.5px solid transparent;
+    outline: 0;
+    transition: border-color 0.5s ease;
+
+    &:hover, &:active, &:focus {
+        border-color: $secondary;
+    }
+}
+
+.text-center  {
+  text-align: center;
+}
+
+
+.work-in-progress {
+  position: fixed;
+  top: 13px;
+  right: 25px;
+  font-size: 12px;
+  color: $white;
+  z-index: 100;
+  transform-origin: 100% 50% 0;  
+  transform: rotate(-90deg);
+  opacity: 0;
+}
+
+.animate-bubbleIn {
+  animation-name: bubbleIn;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}

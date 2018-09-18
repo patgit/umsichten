@@ -1,0 +1,34 @@
+.section.intro {
+
+  h1 {
+    animation: fadeInDown 1s .3s backwards;
+  }
+
+  a {
+    animation: fadeInDown 1s 2.9s backwards;
+  }
+
+	h1 {
+		font-size: 16px;
+    // color: #d8dae0;
+    color: #fff;
+
+    	@include media-breakpoint-up(md) { 
+	  		font-size: 18px;
+    	}
+  	}
+
+  	.content {
+		  padding-top: 40vh;	
+  		text-align: center;
+  	}
+
+  	.svg-arrow svg {
+  		stroke: $white;
+  	}
+
+    
+}
+
+
+

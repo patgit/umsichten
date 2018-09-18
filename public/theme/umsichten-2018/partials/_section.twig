@@ -1,0 +1,25 @@
+<section id="{{ record.slug }}" class="section {{ row }}">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="content">
+                    <header>
+                    {% if single == true %}
+                        <h1>{{ record.title }}</h1>
+                    {% else %}
+                        <h2>{{ record.title }}</h2>
+                    {% endif %}
+                    {{ record.body }}
+                    </header>
+                </div>
+            </div>
+        </div>
+        
+        {% if target is defined %}
+        <a href="#{{ target.slug }}" class="svg-arrow btn-down">
+            {% include ('images/arrow.svg') %}
+        </a>
+        {% endif %}
+
+    </div>
+</section>
